@@ -1,0 +1,9 @@
+app/config.php
+.runtime/
+.~lock.*#
+*.swp
+*.swo
+.DS_Store
+ritm_goroda_backup.sql
+*_backup.sql
+/123

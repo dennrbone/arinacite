@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Регистрация на музыкальный фестиваль «Ритм города»">
+  <title>Ритм города — регистрация на фестиваль</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top">Ритм города</a>
+      <nav aria-label="Основная навигация">
+        <a href="#about">О фестивале</a>
+        <a href="#registration">Регистрация</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="intro container" id="about">
+      <p class="eyebrow">Музыкальный фестиваль</p>
+      <h1>Три дня музыки, которую вы любите</h1>
+      <p class="intro-text">Выберите дни посещения, расскажите о своих музыкальных предпочтениях и зарегистрируйтесь на фестиваль «Ритм города».</p>
+      <a class="intro-link" href="#registration">Перейти к регистрации</a>
+    </section>
+
+    <section class="registration container" id="registration" aria-labelledby="registration-title">
+      <div class="section-heading">
+        <p class="eyebrow">Анкета участника</p>
+        <h2 id="registration-title">Регистрация на фестиваль</h2>
+        <p>Поля со звёздочкой обязательны для заполнения.</p>
+      </div>
+
+      <form id="festival-form" action="" method="get">
+        <fieldset>
+          <legend>Личная информация</legend>
+
+          <div class="form-row">
+            <label for="last-name">Фамилия <span class="required" aria-hidden="true">*</span></label>
+            <input id="last-name" name="last_name" type="text" autocomplete="family-name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="first-name">Имя <span class="required" aria-hidden="true">*</span></label>
+            <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+          </div>
+
+          <div class="form-row">
+            <label for="birth-date">Дата рождения <span class="required" aria-hidden="true">*</span></label>
+            <input id="birth-date" name="birth_date" type="date" required>
+          </div>
+
+          <div class="form-row">
+            <label for="arrival-time">Примерное время прибытия</label>
+            <input id="arrival-time" name="arrival_time" type="time">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Информация о билете</legend>
+
+          <div class="form-row">
+            <label for="ticket-type">Тип билета <span class="required" aria-hidden="true">*</span></label>
+            <select id="ticket-type" name="ticket_type" required>
+              <option value="" selected disabled>Выберите тип билета</option>
+              <option value="standard">Стандартный</option>
+              <option value="fan-zone">Фан-зона</option>
+              <option value="vip">VIP</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <span class="row-label" id="days-label">Выберите дни посещения:</span>
+            <div class="choice-list" role="group" aria-labelledby="days-label">
+              <label><input name="days" type="checkbox" value="friday"> День 1 (Пятница)</label>
+              <label><input name="days" type="checkbox" value="saturday"> День 2 (Суббота)</label>
+              <label><input name="days" type="checkbox" value="sunday"> День 3 (Воскресенье)</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="ticket-count">Количество билетов (от 2 до 5)</label>
+            <input id="ticket-count" name="ticket_count" type="number" min="2" max="5" value="2">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Музыкальные предпочтения</legend>
+
+          <div class="stacked-field">
+            <span class="row-label" id="genres-label">Любимые музыкальные жанры:</span>
+            <div class="genres" role="group" aria-labelledby="genres-label">
+              <label><input name="genres" type="checkbox" value="rock"> Рок</label>
+              <label><input name="genres" type="checkbox" value="electronic"> Электронная</label>
+              <label><input name="genres" type="checkbox" value="metal"> Метал</label>
+              <label><input name="genres" type="checkbox" value="pop"> Поп</label>
+              <label><input name="genres" type="checkbox" value="jazz"> Джаз</label>
+              <label><input name="genres" type="checkbox" value="country"> Кантри</label>
+              <label><input name="genres" type="checkbox" value="hip-hop"> Хип-хоп</label>
+              <label><input name="genres" type="checkbox" value="classical"> Классическая</label>
+              <label><input name="genres" type="checkbox" value="reggae"> Регги</label>
+              <label><input name="genres" type="checkbox" value="rnb"> R&amp;B</label>
+              <label><input name="genres" type="checkbox" value="folk"> Фолк</label>
+              <label><input name="genres" type="checkbox" value="other"> Другое</label>
+            </div>
+          </div>
+
+          <div class="stacked-field">
+            <label for="artists">Любимые исполнители или группы (через запятую)</label>
+            <input id="artists" name="artists" type="text">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Дополнительные услуги</legend>
+
+          <div class="form-row">
+            <span class="row-label" id="camping-label">Нужно ли место в кемпинге?</span>
+            <div class="choice-list" role="group" aria-labelledby="camping-label">
+              <label><input name="camping" type="radio" value="yes"> Да</label>
+              <label><input name="camping" type="radio" value="no" checked> Нет</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="food">Предпочтения в еде</label>
+            <select id="food" name="food">
+              <option value="none">Без предпочтений</option>
+              <option value="vegetarian">Вегетарианское</option>
+              <option value="vegan">Веганское</option>
+              <option value="gluten-free">Без глютена</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="excitement">Оцените ваше ожидаемое удовлетворение от фестиваля:</label>
+            <div class="range-control">
+              <input id="excitement" name="excitement" type="range" min="0" max="10" value="5">
+              <output id="excitement-value" for="excitement">5 из 10</output>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit">Зарегистрироваться на фестиваль</button>
+          <button type="reset" class="reset-button">Очистить</button>
+        </div>
+        <p id="form-status" class="form-status" role="status" hidden>Анкета заполнена. Это демонстрационный сайт, поэтому заявка не сохраняется.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Ритм города · Музыкальный фестиваль</div>
+  </footer>
+</body>
+</html>
